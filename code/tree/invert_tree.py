@@ -73,3 +73,8 @@ class Solution:
 
 s = Solution()
 s.main_func([4,2,7,1,3,6,9])
+
+s = {}
+if s.get('d'):
+    print('ddd')
+    s.set
