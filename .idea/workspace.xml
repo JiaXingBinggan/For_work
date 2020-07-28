@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fd7c5c0-d10a-410a-a820-27a06fe8e98b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/judge_child_sequece.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/last_remaining.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/search_2d_matrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/single_num.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tree/level_order.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tree/max_depth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tree/rebuildTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/tree/serializeTree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/num_ways.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,42 +26,33 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="note" value="1" />
-          <entry key="py" value="127" />
+          <entry key="py" value="128" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="127" />
+          <entry key="Python" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="9" />
           <entry key="note" value="22" />
-          <entry key="py" value="60179" />
+          <entry key="py" value="60203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="31" />
-          <entry key="Python" value="60179" />
+          <entry key="Python" value="60203" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/tree/invert_tree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/first_appear_char.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,11 +101,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/last_remaining.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="303">
               <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code/num_ways.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -184,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/DP/thief.py" />
         <option value="$PROJECT_DIR$/code/search/binary_search.py" />
         <option value="$PROJECT_DIR$/code/sort.py" />
         <option value="$PROJECT_DIR$/code/sort/choose_sort.py" />
@@ -235,6 +227,7 @@
         <option value="$PROJECT_DIR$/code/tree/level_order.py" />
         <option value="$PROJECT_DIR$/code/tree/max_depth.py" />
         <option value="$PROJECT_DIR$/code/last_remaining.py" />
+        <option value="$PROJECT_DIR$/code/num_ways.py" />
       </list>
     </option>
   </component>
@@ -263,12 +256,6 @@
               <item name="for_work" type="b2602c69:ProjectViewProjectNode" />
               <item name="For_work" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="for_work" type="b2602c69:ProjectViewProjectNode" />
-              <item name="For_work" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="queue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -304,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hot_potato">
+  <component name="RunManager" selected="Python.num_ways">
     <configuration name="hot_potato" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="for_work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -368,6 +355,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="num_ways" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="for_work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/num_ways.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="search_2d_matrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="for_work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -389,41 +397,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="serializeTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="for_work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code/tree" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/tree/serializeTree.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.serializeTree" />
       <item itemvalue="Python.judge_child_sequece" />
       <item itemvalue="Python.search_2d_matrix" />
       <item itemvalue="Python.last_remaining" />
       <item itemvalue="Python.hot_potato" />
+      <item itemvalue="Python.num_ways" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.num_ways" />
         <item itemvalue="Python.hot_potato" />
         <item itemvalue="Python.last_remaining" />
         <item itemvalue="Python.search_2d_matrix" />
         <item itemvalue="Python.judge_child_sequece" />
-        <item itemvalue="Python.serializeTree" />
       </list>
     </recent_temporary>
   </component>
@@ -449,12 +436,12 @@
     <frame x="953" y="30" width="974" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2681624" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2681624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33261105" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33261105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,13 +459,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/stack/simple_par_checker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/stack/par_checker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -935,8 +915,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/last_remaining.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="303">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/num_ways.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
