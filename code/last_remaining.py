@@ -22,5 +22,21 @@ class Solution(object):
 
         return queue[0]
 
+    def lastRemaining1(self, n, m):
+        """
+        暴力解法，因为是从0开始，设置开始index=0，那么传递m次后则新位置为index + m - 1，此时从0到n-1的数组中去除它（数组长度减一）
+        然后新的index仍旧从它开始，然而可能在计算的过程中m比数组的长度大，所以需要对m取余，index = (index + m - 1) % m
+        :type n: int
+        :type m: int
+        :rtype: int
+        """
+        i, list_n = 0, list(range(n))
+
+        while len(list_n) > 1:
+            i = (i + m - 1) % len(list_n)
+            list_n.pop(i)
+
+        return list_n[0]
+
 s = Solution()
 print(s.lastRemaining(70866, 116922))
