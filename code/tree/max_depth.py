@@ -26,3 +26,14 @@ class Solution(object):
                 depth = current_node_level + 2
 
         return depth
+
+    def maxDepth2(self, root):
+        '''
+        更优解法，使用递归，因为当前root节点的深度=max(左子树的深度, 右子树) + 1
+        :param root:
+        :return:
+        '''
+        if not root: # 没有子节点了说明深度为0
+            return 0
+
+        return max(self.maxDepth2(root.left), self.maxDepth2(root.right)) + 1
