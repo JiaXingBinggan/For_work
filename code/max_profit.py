@@ -16,3 +16,4 @@ class Solution(object):
             max_profit = max(price - min_price, max_profit)
 
         return max_profit
+
