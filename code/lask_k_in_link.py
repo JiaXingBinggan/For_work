@@ -50,12 +50,18 @@ class Solution2(object):
         """
         # 双指针思路
         latter, former = head, head
-        for i in range(k):
+        list_len = 0 # 用于判断链表长度，如果list_len比k小，则返回None
+        while former and list_len < k:
+            list_len += 1
             former = former.next
 
         while former:
-            latter = latter.next
+            list_len += 1
             former = former.next
+            latter = latter.next
+
+        if list_len < k:
+            return None
 
         return latter
 
