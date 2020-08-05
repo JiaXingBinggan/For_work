@@ -19,7 +19,7 @@ class Solution:
         '''
         if first < last: # 只剩下一个或者没有就停止了，因为如果只剩一个，则first=last
             new_split_index = self.position(unorderedList, first, last) # 求得中位值对应index，用于把列表分为两半
-
+            print(new_split_index, first, last)
             self.recurrenceSort(unorderedList, first, new_split_index - 1)
             self.recurrenceSort(unorderedList, new_split_index + 1, last)
 
@@ -54,5 +54,6 @@ class Solution:
 
 s = Solution()
 print(s.quickSort([4, 3, 5, 2, 6, 1, 7, 6]))
+print(s.quickSort([3, 2, 1]))
 
 
