@@ -16,7 +16,7 @@ class Solution(object):
                 dp_str[i] = dp_str[i - 1] + s[i]
             else:
                 origin_s_index = dp_str[i - 1].index(s[i])
-                dp_str[i] = dp_str[i - 1][origin_s_index + 1:] + s[i]
+                dp_str[i] = dp_str[i - 1][origin_s_index + 1:] + s[i] # 注意这里需要再前进一位
 
             dp_num[i] = len(dp_str[i])
 
