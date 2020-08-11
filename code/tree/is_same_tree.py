@@ -32,3 +32,11 @@ class Solution(object):
             right = self.preorder(root.right)
 
             return [root.val] + left + right
+
+    def is_same_tree(self, p, q):
+        if not p and not q: # 如果两者同时为空肯定返回True
+            return True
+        elif p and q:
+            return p.val == q.val and self.is_same_tree(p.left, q.left) and self.is_same_tree(p.right, q.right)
+        else:
+            return False
