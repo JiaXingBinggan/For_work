@@ -16,7 +16,7 @@ def parChecker(pars): # 同时存在多种不同的开闭符号的符号匹配
 
         par_index += 1
 
-    if stack.isEmpty() and isBalanced:
+    if stack.isEmpty() and isBalanced: # 栈为空的话，则表明已经匹配完成（但需要加个限制条件，要匹配才行，例如(}这样的组合）
         return True
     else:
         return False
