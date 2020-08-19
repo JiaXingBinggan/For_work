@@ -18,7 +18,7 @@ class Solution(object):
         """
 
         '''
-       最近公共祖先的定义： 设节点 root为节点 p,q的某公共祖先，若其左子节点 root.left和右子节点 root.right都不是 p,qp,qp,q 的公共祖先，则称 root是 “最近的公共祖先” 。
+       最近公共祖先的定义： 设节点 root为节点 p,q的某公共祖先，若其左子节点 root.left和右子节点 root.right都不是 p,q的公共祖先，则称 root是 “最近的公共祖先” 。
 
 根据以上定义，若 root是 p,q的 最近公共祖先 ，则只可能为以下情况之一：
 

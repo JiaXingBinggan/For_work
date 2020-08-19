@@ -26,3 +26,8 @@ class Solution(object):
                     dp_table[i][j] = max(dp_table[i - 1][j], dp_table[i][j - 1])
 
         return dp_table[-1][-1]
+
+s = Solution()
+print(s.longestCommonSubsequence('asdfas', 'werasdfaswer'))
+print(s.longestCommonSubsequence('bacefaebcdfabfaadebdaacabbdabcfffbdcebaabecefddfaceeebaeabebbad',
+'dedcecfbbbecaffedcedbadadbbfaafcafdd'))

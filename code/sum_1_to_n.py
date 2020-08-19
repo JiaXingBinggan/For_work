@@ -15,5 +15,9 @@ class Solution(object):
 
         return self.sum_
 
+    def sum_nums(self, n):
+        return n > 1 and n + self.sumNums(n - 1)
+
 s = Solution()
-print(s.sumNums(9))
+# print(s.sumNums(9))
+print(s.sum_nums(9))
