@@ -1,42 +1,34 @@
 import sys
 
-
-def move(num1, num2):
-    move = 0
-    sum_ = num1 + num2
-    if sum_ >= 10:
-        move = 1
-    new_num = sum_ % 10
-
-    return move, new_num
-
-
 if __name__ == '__main__':
-    while True:
-        try:
-            line1 = sys.stdin.readline().strip()
-            if not line1:
-                break
-            line2 = sys.stdin.readline().strip()
+    line1 = sys.stdin.readline().strip()
+    line2 = sys.stdin.readline().strip()
 
-            line1, line2 = list(line1), list(line2)
-            n1, n2 = len(line1), len(line2)
-            if n1 > n2:
-                line2 = ['0'] * (n1 - n2) + line2
+    n, m = tuple(map(int, line1.split(' ')))
+    A_nums = list(map(int, line2.split(' '))) # A的带宽
+    if len(A_nums) != n: # 不合法输入
+        print(0)
+
+    customer_budget = {} # 字典包括带宽和预算
+    for _ in range(m):
+        line = sys.stdin.readline().strip()
+        if not line:
+            break
+        else:
+            current_num_budget = tuple(map(int, line.split(' ')))
+            if current_num_budget[0] not in customer_budget:
+                customer_budget.setdefault(current_num_budget[0], [current_num_budget[1]])
             else:
-                line1 = ['0'] * (n2 - n1) + line1
-
-            n = len(line1)
-            new_string = ''
-            move_flag = 0
-            for i in range(n - 1, -1, -1):
-                move_, new_num = move(int(line1[i]), int(line2[i]))
-                move_flag = move_
-                if move_:
-                    line1[i - 1] = str(int(line1[i - 1]) + 1)
-                new_string += str(new_num)
-            if move_flag:
-                new_string += '1'
-            print(''.join(list(reversed(new_string))))
-        except:
-            pass
+                customer_budget[current_num_budget[0]].append(current_num_budget[1])
+    sells = 0
+    for a_num in A_nums:
+        max_value = 0
+        max_index = 0
+        while a_num > 0:
+            if a_num in customer_budget and customer_budget[a_num] and max(customer_budget[a_num]) > max_value:
+                max_value = max(customer_budget[a_num])
+                max_index = a_num
+            a_num -= 1
+        customer_budget[max_index].remove(max_value)
+        sells += max_value
+    print(sells)
