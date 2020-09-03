@@ -22,3 +22,15 @@ class Solution(object):
             slow = slow.next
 
         return True
+
+    def hasCycle2(self, head):
+        if not head:
+            return False
+
+        slow, fast = head, head.next
+
+        while fast and fast.next and slow != fast:
+            slow = slow.next
+            fast = fast.next.next
+
+        return fast == slow

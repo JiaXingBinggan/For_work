@@ -18,10 +18,10 @@ def partition(nums, first, last):
 
     done = False
     while not done:
-        while left_mark <= right_mark and nums[left_mark] <= mid_num:
+        while (left_mark <= right_mark and nums[left_mark] <= mid_num):
             left_mark += 1
 
-        while right_mark >= left_mark and nums[right_mark] >= mid_num:
+        while (right_mark >= left_mark and nums[right_mark] >= mid_num):
             right_mark -= 1
 
         if left_mark > right_mark:
@@ -35,9 +35,9 @@ def partition(nums, first, last):
 
 def quick(nums, left, right, k):
     low = partition(nums, left, right)
-    if (len(nums) - low - 1) == k:
+    if low == k:
         return nums[low]
-    elif (len(nums) - low - 1) < k:
+    elif low < k:
         return quick(nums, low + 1, right, k)
     else:
         return quick(nums, left, low - 1, k)
