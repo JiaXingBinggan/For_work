@@ -1,26 +1,18 @@
 class Solution(object):
-    def rotate(self, nums, k):
+    def maxProduct(self, nums):
         """
+        https://leetcode-cn.com/submissions/detail/102119350/
         :type nums: List[int]
-        :type k: int
-        :rtype: None Do not return anything, modify nums in-place instead.
+        :rtype: int
         """
+        if not nums:
+            return 0
+
         n = len(nums)
-        k = k % n # 当前进次数大于n时，需要取余
-        if k < 2:
-            pass
+        reverse_nums = nums[::-1]
 
-        def swap(i, j, nums):
-            while i <= j:
-                nums[i], nums[j] = nums[j], nums[i]
-                i += 1
-                j -= 1
+        for i in range(1, n):
+            nums[i] *= nums[i - 1] or 1
+            reverse_nums[i] *= reverse_nums[i - 1] or 1
 
-        swap(0, n - 1, nums)
-        swap(0, k - 1, nums)
-        swap(k, n - 1, nums)
-
-        print(nums)
-
-s = Solution()
-print(s.rotate([1, 2], 3))
+        return max(max(nums), max(reverse_nums))
