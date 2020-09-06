@@ -12,6 +12,7 @@ class Solution(object):
             tmp, board[i][j] = board[i][j], '/'
             res = dfs(i + 1, j, k + 1) or dfs(i - 1, j, k + 1) or dfs(i, j + 1, k + 1) or dfs(i, j - 1, k + 1)
             board[i][j] = tmp # 记得这里要还原
+
             return res
 
         for i in range(len(board)):
