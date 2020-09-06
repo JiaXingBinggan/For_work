@@ -1,3 +1,5 @@
+import sys
+
 def cal_revenue(arr, budget):
     res = []
     for item in arr:
@@ -10,6 +12,20 @@ def cal_revenue(arr, budget):
 
     return res
 
+
+'''
+输入：
+total,78
+新网1号,5,2.0%
+新网2号,12,2.5%
+新网3号,16,2.8%
+新网4号,17,2.9%
+null
+输出：
+新网2号,12
+新网3号,32
+新网4号,34
+'''
 if __name__ == '__main__':
     items = []
     budget = 0
