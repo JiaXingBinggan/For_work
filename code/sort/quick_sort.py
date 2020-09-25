@@ -52,7 +52,49 @@ class Solution:
 
         return rightmark
 
-s = Solution()
+class Solution2:
+    def quickSort(self, unorderedList):
+        if not unorderedList:
+            return unorderedList
+
+        self.recurSort(unorderedList, 0, len(unorderedList) - 1)
+
+        return unorderedList
+
+    def recurSort(self, unorderedList, first, last):
+        if first < last:
+            split_position = self.splitPosition(unorderedList, first, last)
+            self.recurSort(unorderedList, first, split_position - 1)
+            self.recurSort(unorderedList, split_position + 1, last)
+
+    def splitPosition(self, unorderedList, first, last):
+        mid_value = unorderedList[first]
+        left = first + 1
+        right = last
+
+        done = False
+        while not done:
+            while left <= right and unorderedList[left] <= mid_value:
+                left += 1
+
+            while left <= right and unorderedList[right] >= mid_value:
+                right -= 1
+
+            if left > right:
+                done = True
+            else:
+                unorderedList[left], unorderedList[right] = unorderedList[right], unorderedList[left]
+
+        unorderedList[first], unorderedList[right] = unorderedList[right], mid_value
+
+        return right
+
+
+# s = Solution()
+# print(s.quickSort([4, 3, 5, 2, 6, 1, 7, 6]))
+# print(s.quickSort([3, 2, 1]))
+
+s = Solution2()
 print(s.quickSort([4, 3, 5, 2, 6, 1, 7, 6]))
 print(s.quickSort([3, 2, 1]))
 

@@ -5,19 +5,28 @@ class Solution:
         :param unorderedList:
         :return:
         '''
-        for pass_num in range(len(unorderedList) - 1, 0, -1):
+        for pass_num in range(len(unorderedList) - 1, -1, -1):
             max_location = 0
-            for i in range(pass_num + 1): # 至少要有pass_num + 1个数字
+            for i in range(pass_num + 1):
                 if unorderedList[i] > unorderedList[max_location]:
                     max_location = i
 
-            temp = unorderedList[pass_num]
-            unorderedList[pass_num] = unorderedList[max_location]
-            unorderedList[max_location] = temp
+            unorderedList[pass_num], unorderedList[max_location] = unorderedList[max_location], unorderedList[pass_num]
 
-        orderedList = unorderedList
+        return unorderedList
 
-        return orderedList
+    def chooseSort2(self, unorderedList):
+        for pass_num in range(len(unorderedList) - 1, -1, -1):
+            max_location = 0
+            for i in range(1, pass_num + 1):
+                if unorderedList[i] > unorderedList[max_location]:
+                    max_location = i
+
+            unorderedList[pass_num], unorderedList[max_location] = unorderedList[max_location], unorderedList[pass_num]
+
+        return unorderedList
+
 
 s = Solution()
 print(s.chooseSort([2, 4, 2, 6, 3, 8, 19, 12]))
+print(s.chooseSort2([2, 4, 2, 6, 3, 8, 19, 12]))

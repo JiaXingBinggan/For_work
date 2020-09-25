@@ -1,4 +1,14 @@
 class Solution:
+    def bubbleSort(self, unordered_list):
+        for i in range(len(unordered_list) - 1, -1, -1):
+            for j in range(i):
+                temp = unordered_list[j + 1]
+                if unordered_list[j] > temp:
+                    unordered_list[j + 1] = unordered_list[j]
+                    unordered_list[j] = temp
+
+        return unordered_list
+
     def bubbleSort1(self, unordered_list):
         '''
         冒泡排序
@@ -60,6 +70,7 @@ class Solution:
         return ordered_list
 
 s = Solution()
+print(s.bubbleSort([4, 23, 2, 7, 1, 5, 18]))
 print(s.bubbleSort1([4, 23, 2, 7, 1, 5, 18]))
 print(s.bubbleSort2([4, 23, 2, 7, 1, 5, 18]))
 print(s.bubbleSort2([4, 23, 2, 7, 1, 5, 18]))

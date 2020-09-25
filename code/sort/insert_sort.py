@@ -19,5 +19,18 @@ class Solution:
 
         return orderedList
 
+    def insertSort2(self, unorderedList):
+        for index, num in enumerate(unorderedList):
+            position = index
+            while position and unorderedList[position - 1] > num:
+                unorderedList[position] = unorderedList[position - 1]
+                position -= 1
+
+            unorderedList[position] = num
+        return unorderedList
+
+
+
 s = Solution()
 print(s.insertSort([34, 23, 45, 67, 12, 11]))
+print(s.insertSort2([34, 23, 45, 67, 12, 11]))

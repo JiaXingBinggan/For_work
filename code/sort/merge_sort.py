@@ -12,7 +12,7 @@ class Solution:
         mid = len(unorderedList) // 2
         left = self.mergeSort(unorderedList[:mid])
         right = self.mergeSort(unorderedList[mid:])
-        print(mid, left, right)
+
         # 对已经划分好的left和right列表进行归并排序
         tempOrderedList = []
         while left and right:
@@ -27,5 +27,26 @@ class Solution:
 
         return tempOrderedList
 
+    def mergeSort2(self, unorderedList):
+        if len(unorderedList) <= 1:
+            return unorderedList
+
+        mid = len(unorderedList) // 2
+        left = self.mergeSort2(unorderedList[:mid])
+        right = self.mergeSort2(unorderedList[mid:])
+
+        res = []
+        while left and right:
+            if left[0] < right[0]:
+                res.append(left.pop(0))
+            else:
+                res.append(right.pop(0))
+
+        res.extend(left if left else right)
+
+        return res
+
 s = Solution()
 print(s.mergeSort([1,3,2,8,5,7, 4, 9, 0, 6]))
+print(s.mergeSort2([1,3,2,8,5,7, 4, 9, 0, 6]))
+

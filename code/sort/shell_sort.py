@@ -31,5 +31,34 @@ class Solution:
 
             unorderedList[position] = current_num
 
-s = Solution()
+class Solution2:
+    def insertSort(self, unorderedList, start, gap):
+        for index in range(start, len(unorderedList), gap):
+            num = unorderedList[index]
+            position = index
+
+            while position > start and unorderedList[position - gap] > num:
+                unorderedList[position] = unorderedList[position - gap]
+                position -= gap
+
+            unorderedList[position] = num
+
+        return unorderedList
+
+    def shellSort(self, unorderedList):
+        gap = len(unorderedList) // 2
+        while gap > 0:
+            for i in range(gap):
+                self.insertSort(unorderedList, i, gap)
+
+            gap = gap // 2
+
+        return unorderedList
+
+
+
+# s = Solution()
+# print(s.shellSort([13, 4, 5, 3, 35, 12, 2, 6, 16]))
+
+s = Solution2()
 print(s.shellSort([13, 4, 5, 3, 35, 12, 2, 6, 16]))

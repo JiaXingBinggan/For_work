@@ -34,7 +34,7 @@ class Solution:
         :return:
         '''
         i = len(alist) // 2 # 叶节点不需要下沉
-        heap_list = [0] + alist
+        heap_list = [0] + alist # 当前节点的2倍是左子节点
         heap_size = len(alist)
         while i > 0:
             self.down(heap_list, heap_size, i)

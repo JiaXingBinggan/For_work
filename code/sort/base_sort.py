@@ -36,6 +36,41 @@ class Solution:
 
         return orderedList
 
+    def baseNumSort2(self, arr):
+        base_dict = {}
+        for i in range(10):
+            base_dict.setdefault(i, [])
+
+        main_queue = []
+        for item in arr:
+            main_queue.append(item)
+
+        max_num = max(arr)
+        max_base_index = 1
+        while max_num >= 10 ** max_base_index:
+            max_base_index += 1
+
+        for i in range(max_base_index):
+            while main_queue:
+                current_num = main_queue.pop(0)
+                current_base = int((current_num / 10 ** i) % 10)
+                base_dict[current_base].append(current_num)
+
+            for i in range(10):
+                while base_dict[i]:
+                    main_queue.append(base_dict[i].pop(0))
+
+        res = []
+        while main_queue:
+            res.append(main_queue.pop(0))
+
+        return res
+
+
+
+
 print(759 // 10)
 s = Solution()
 print(s.baseNumSort([8, 91, 34, 22, 65, 30, 4, 55, 18]))
+print(s.baseNumSort2([8, 91, 34, 22, 65, 30, 4, 55, 18]))
+
